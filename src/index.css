@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+section {
+  &:hover::before {
+    content: "X";
+    @apply bg-red-500 text-white px-1.5 absolute -left-6 top-2/4 -translate-y-2/4 cursor-pointer rounded-sm;
+  }
+
+  &::after {
+    content: "";
+    @apply bg-green-500 top-0 right-0 absolute w-1.5 h-full;
+  }
+}
